@@ -1,0 +1,76 @@
+/* DOUBLE HARBOUR — dark navy theme, gold accents, like the harbour games
+   it learned from: a deep navy page, gold rings on found differences. */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #0b1220;
+  color: #e8edf5;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+#wrap { max-width: 1220px; margin: 0 auto; padding: 18px 20px 40px; }
+header h1 { margin: 0; font-size: 30px; letter-spacing: 0.5px; color: #ffd93b; }
+header h1 span { color: #e8edf5; font-weight: 600; }
+.tagline { margin: 6px 0 14px; color: #9fb0c7; font-size: 14px; }
+#hud { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.pill {
+  background: #1b263b; border: 1px solid #2c3a55; border-radius: 999px;
+  padding: 6px 14px; font-size: 14px; font-weight: 600;
+}
+.pill.level { background: #ffd93b; color: #1a1200; border-color: #ffd93b; }
+.pill.left { background: #e63946; color: #fff; border-color: #e63946; }
+.pill.streak { background: #2f9e44; color: #fff; border-color: #2f9e44; }
+.pill.time { font-variant-numeric: tabular-nums; }
+#timerWrap {
+  height: 8px; background: #1b263b; border-radius: 99px;
+  margin: 10px 0 12px; overflow: hidden;
+}
+#timerBar {
+  height: 100%; width: 100%; border-radius: 99px;
+  background: linear-gradient(90deg, #2f9e44, #ffd93b);
+  transition: width 0.5s linear;
+}
+#panels { position: relative; }
+#game {
+  display: block; width: 100%; height: auto;
+  background: #101c30; border-radius: 12px; cursor: crosshair;
+}
+#labels {
+  display: flex; justify-content: space-between;
+  color: #9fb0c7; font-size: 13px; padding: 6px 4px 0;
+}
+#controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 12px; }
+button {
+  background: #ffd93b; color: #1a1200; border: none; border-radius: 8px;
+  padding: 9px 16px; font-size: 14px; font-weight: 700; cursor: pointer;
+}
+button:hover:not(:disabled) { filter: brightness(1.08); }
+button:disabled { opacity: 0.45; cursor: default; }
+#soundBtn, #levelsBtn, #pauseBtn { background: #1b263b; color: #e8edf5; border: 1px solid #2c3a55; }
+#message { color: #c6d2e2; font-size: 14px; margin-left: 6px; }
+#dots { margin-top: 12px; color: #9fb0c7; font-size: 14px; }
+.dot {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; border-radius: 50%;
+  border: 2px solid #415a77; margin-right: 6px;
+  font-size: 13px; color: #fff; vertical-align: middle;
+}
+.dot.found { background: #2f9e44; border-color: #2f9e44; }
+#keys { color: #8fa1b8; font-size: 13px; margin: 14px 0 10px; }
+#sceneBar { display: flex; flex-wrap: wrap; gap: 8px; }
+#sceneBar button {
+  background: #1b263b; color: #c6d2e2; border: 1px solid #2c3a55; font-weight: 600;
+}
+#sceneBar button.active { background: #ffd93b; color: #1a1200; border-color: #ffd93b; }
+#howto {
+  margin-top: 22px; background: #101c30; border: 1px solid #22304a;
+  border-radius: 12px; padding: 16px 20px;
+}
+#howto h2 { margin: 0 0 8px; color: #ffd93b; font-size: 18px; }
+#howto p { margin: 6px 0; color: #c6d2e2; font-size: 14px; line-height: 1.55; }
+#overlay {
+  display: none; margin-top: 16px; text-align: center;
+  background: #101c30; border: 1px solid #ffd93b; border-radius: 12px; padding: 18px;
+}
+#overlay.show { display: block; }
+#overlay h2 { margin: 0 0 6px; color: #ffd93b; }
+#overlay p { margin: 4px 0; color: #e8edf5; }

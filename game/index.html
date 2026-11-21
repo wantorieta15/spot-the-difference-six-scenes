@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DOUBLE HARBOUR — Spot the Difference: 6 scenes, 50 fair differences</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <h1>🔍 DOUBLE HARBOUR <span>Spot the Sneaky Shifts</span></h1>
+      <p class="tagline">6 scenes · 50 fair differences in all · every difference is fair: removed, recoloured, moved, resized, flipped or added.</p>
+    </header>
+    <div id="hud">
+      <span class="pill level" id="levelPill">Level 1 — Sunny Park Picnic</span>
+      <span class="pill left" id="leftPill">9 left</span>
+      <span class="pill found" id="foundPill">0 / 9 found</span>
+      <span class="pill" id="scorePill">Score 0</span>
+      <span class="pill streak" id="streakPill">Streak ×0</span>
+      <span class="pill time" id="timerPill">2:00</span>
+    </div>
+    <div id="timerWrap"><div id="timerBar"></div></div>
+    <div id="panels">
+      <canvas id="game" width="1160" height="440"></canvas>
+      <div id="labels"><span>Original</span><span>Changed — click a difference on either picture</span></div>
+    </div>
+    <div id="controls">
+      <button id="hintBtn" type="button">Hint (3)</button>
+      <button id="restartBtn" type="button">Restart level</button>
+      <button id="pauseBtn" type="button">Pause</button>
+      <button id="levelsBtn" type="button">Levels</button>
+      <button id="soundBtn" type="button">Sound on</button>
+      <button id="nextBtn" type="button" disabled>Next scene (N)</button>
+      <span id="message">Click a difference on either picture. Arrow keys move the cursor, Enter selects.</span>
+    </div>
+    <div id="dots">Found: </div>
+    <p id="keys">Mouse: click to guess · hover = magnifier · Keys: arrows crosshair, Enter guess, Tab switch picture, H hint, L lens, N next, R restart, 1–6 level</p>
+    <div id="sceneBar">
+      <button type="button" class="active">1. Sunny Park Picnic</button>
+      <button type="button">2. The Cozy Library</button>
+      <button type="button">3. Harbor at Dusk</button>
+      <button type="button">4. Mountain Cabin Night</button>
+      <button type="button">5. Lantern Night Market</button>
+      <button type="button">6. Space Station Window</button>
+    </div>
+    <section id="howto">
+      <h2>How to play</h2>
+      <p>Two pictures look the same — but the right one has sneaky shifts: things removed, recoloured, moved, resized, flipped or added. Click a difference on <i>either</i> picture to ring it. Wrong guesses cost 5 seconds. Find them all before the timer bar empties. Six scenes get denser and sneakier: a sunny picnic, a cozy library, a harbor at dusk, a snowy cabin, a lantern night market, and a space-station window.</p>
+      <p>Keyboard players: arrows move the crosshair, Enter guesses, Tab switches picture, H asks for a hint, L toggles the magnifier lens, N goes to the next scene, R restarts, and 1–6 jump straight to a scene. Hover any picture to zoom in with the magnifier.</p>
+    </section>
+    <div id="overlay"></div>
+  </div>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
